@@ -44,7 +44,7 @@ func HandleLINEWebhook(w http.ResponseWriter, r *http.Request) {
 
 func handleTextMessageEvent(msg *linebot.TextMessage, event *linebot.Event) {
 	qText := msg.Text
-	qText = strings.Replace(qText, "台", "臺", -1)
+	qText = strings.Replace(qText, "台", "臺", -1) // blindly replace 台 with 臺 for now
 
 	baseQuery := fstore.
 		CollectionGroup("trainStops").
