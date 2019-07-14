@@ -10,7 +10,6 @@ import (
 	"time"
 
 	"cloud.google.com/go/firestore"
-
 	"github.com/line/line-bot-sdk-go/linebot"
 )
 
